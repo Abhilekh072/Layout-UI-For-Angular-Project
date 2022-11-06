@@ -1,0 +1,37 @@
+<mat-toolbar color="">
+<mat-toolbar-row>
+    <button mat-icon-button (click)="openMenu()">
+        <mat-icon>menu</mat-icon>
+    </button>
+    <span>Lok Ayog</span>
+    <div fxFlex fxLayout="row" fxLayoutAlign="flex-end">
+        <ul fxLayout="row" fxLayoutGap="20px">
+            <li>
+                <button mat-icon-button>
+                    <mat-icon>settings</mat-icon>
+                </button>
+            </li>
+            <li>
+                <button mat-icon-button>
+                    <mat-icon>help_outline</mat-icon>
+                </button>
+            </li>
+            <li>
+                <button mat-icon-button [matMenuTriggerFor]="menu">
+                    <mat-icon>more_vert</mat-icon>
+                </button>
+                <mat-menu #menu="matMenu">
+                    <button mat-menu-item>
+                        <mat-icon>done</mat-icon>
+                        <span>Done</span> 
+                    </button>
+                    <button mat-menu-item>
+                        <mat-icon>cancel</mat-icon>
+                        <span>Cancel</span> 
+                    </button>
+                </mat-menu>
+            </li>
+        </ul>
+    </div>
+</mat-toolbar-row>
+</mat-toolbar>

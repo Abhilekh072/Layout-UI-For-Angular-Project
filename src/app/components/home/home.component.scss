@@ -1,0 +1,16 @@
+.back{
+    background: url('../../../assets/images/geometric.svg');
+    height: 500px;
+    width: 500px;
+}
+
+.back #logo switch g path{
+    stroke-dasharray: 339px;
+    // stroke-dashoffset: 339px;
+    // animation: line-anim 2s ease forwards;
+}
+@keyframes line-anim{
+    to {
+        stroke-dashoffset: 0;
+    }
+}

@@ -1,0 +1,12 @@
+<div *ngIf="offline" style="background-color: red;padding: 0; display: flex; flex-direction: column;">
+    <marquee ><strong style="color: white;"> No Internet Access!</strong></marquee>
+    <!-- <marquee *ngIf="countdown" behavior="alternate" scrollamount="10"><strong style="color: white;">Alert !  You Will Be Logged Out in : {{countdown}} Seconds, Last Ping: {{lastPing | date :'dd-MM-yyy hh:mm:ss a' }}</strong></marquee> -->
+  
+</div>
+  <!-- <div *ngIf="online" style="padding: 0">
+    <marquee><strong style="color: white;">online</strong></marquee>
+  </div> -->
+  <div *ngIf="countdown"  style="background-color: rgb(255, 27, 27);padding: 0">
+    <marquee behavior="alternate" scrollamount="10"><strong style="color: white;">Alert !  You Will Be Logged Out in : {{countdown}} Seconds, Last Ping: {{lastPing | date :'dd-MM-yyy hh:mm:ss a' }}</strong></marquee>
+  </div>
+<router-outlet></router-outlet>

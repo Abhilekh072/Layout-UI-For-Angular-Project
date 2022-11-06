@@ -1,0 +1,163 @@
+<!-- <mat-list fxShow.md fxHide.lt-md>
+    <div *ngFor="let menu of mainmenu; let i = index">
+        <mat-list-item routerLink="{{menu.route}}" routerLinkActive="active" *ngIf="menu.route">
+            <mat-icon mat-list-icon>{{menu.icon}}</mat-icon>
+            {{menu.label}}
+        </mat-list-item>
+        <mat-expansion-panel *ngIf="!menu.route" routerLinkActive="active">
+            <mat-expansion-panel-header>
+                <mat-panel-title mat-list-item>
+                    <mat-icon mat-list-icon mat-list-item color="primary">{{menu.icon}}</mat-icon>
+                    {{menu.label}}
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+            <mat-list-item routerLink="{{item.route}}" *ngFor="let item of menu.child" routerLinkActive="active">
+                <mat-icon mat-list-icon >{{item.icon}}</mat-icon>
+                {{item.label}}
+            </mat-list-item>
+        </mat-expansion-panel>
+    </div>
+</mat-list> -->
+
+<mat-nav-list fxShow.md fxHide.lt-md>
+    <div>
+        <div class="profilecard" *ngIf="open">
+            <img src="./assets/images/photo.jpg">
+            <div class="header">
+                <h2>Abhilekh</h2>
+            </div>
+            <mat-divider></mat-divider>
+        </div>
+        <div *ngIf="!open">
+            <a mat mat-list-item routerLinkActive="list-item-active">
+                <mat-icon mat-list-icon *ngIf="!open">account_circle</mat-icon>
+                <!-- <mat-icon mat-list-icon class="icon-display" *ngIf="open">account_circle</mat-icon>
+                <p mat-line *ngIf="open" style="width: 100px;">Abhilekh</p> -->
+            </a>
+            <mat-divider></mat-divider>
+        </div>    
+    </div>
+    
+    <div *ngFor="let menu of mainmenu; let i = index">
+        <a mat mat-list-item routerLinkActive="list-item-active" *ngIf="menu.route">
+            <mat-icon mat-list-icon *ngIf="!open">{{menu.icon}}</mat-icon>
+            <mat-icon mat-list-icon class="icon-display" *ngIf="open">{{menu.icon}}</mat-icon>
+            <p mat-line style="width: 100px;" routerLink="{{menu.route}}" *ngIf="open">{{menu.label}}</p>
+        </a>
+        <mat-divider></mat-divider>
+        <mat-expansion-panel mat mat-list-item routerLinkActive="list-item-active" *ngIf="!menu.route" [hideToggle]="!open" [disabled]="!open">
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    <mat-icon mat-list-icon *ngIf="!open">{{menu.icon}}</mat-icon>
+                    <mat-icon mat-list-icon class="icon-display" *ngIf="open">{{menu.icon}}</mat-icon>
+                    <p mat-line style="width: 100px; font-size: 16px; padding-left: 24px;padding-top: 24px;"
+                        *ngIf="open">{{menu.label}}</p>
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+            <div *ngIf="open">
+                <a mat mat-list-item routerLinkActive="list-item-active" *ngFor="let item of menu.child">
+                    <mat-icon mat-list-icon class="icon-display">{{item.icon}}</mat-icon>
+                    <p style="padding-top: 11px; width: 132px;" routerLink="{{item.route}}">{{item.label}}</p>
+                </a>
+            </div>
+        </mat-expansion-panel>
+    </div>
+</mat-nav-list>
+
+<!-- <mat-nav-list fxShow.md fxHide.lt-md>
+    <a mat mat-list-item routerLinkActive="list-item-active">
+        <mat-icon mat-list-icon *ngIf="!open">account_circle</mat-icon>
+        <mat-icon mat-list-icon class="icon-display" *ngIf="open">account_circle</mat-icon>
+        <p mat-line *ngIf="open" style="width: 100px;">Abhilekh</p>
+    </a>
+
+    <mat-divider></mat-divider>
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="/">
+        <mat-icon mat-list-icon *ngIf="!open">home</mat-icon>
+        <mat-icon mat-list-icon class="icon-display" *ngIf="open">home</mat-icon>
+        <p mat-line *ngIf="open">Home</p>
+    </a>
+    <a mat-list-item routerLinkActive="list-item-active">
+        <mat-icon mat-list-icon *ngIf="!open">done</mat-icon>
+        <mat-icon mat-list-icon class="icon-display" *ngIf="open">done</mat-icon>
+        <p mat-line *ngIf="open" routerLink="/post">Post</p>
+    </a>
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="/group">
+        <mat-icon mat-list-icon *ngIf="!open">save</mat-icon>
+        <mat-icon mat-list-icon class="icon-display" *ngIf="open">save</mat-icon>
+        <p mat-line *ngIf="open">Group</p>
+    </a>
+    <mat-divider></mat-divider>
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="/school">
+        <mat-icon mat-list-icon *ngIf="!open">import_contacts</mat-icon>
+        <mat-icon mat-list-icon class="icon-display" *ngIf="open">import_contacts</mat-icon>
+        <p mat-line *ngIf="open">School</p>
+    </a>
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="/college">
+        <mat-icon mat-list-icon *ngIf="!open">contact_phone</mat-icon>
+        <mat-icon mat-list-icon class="icon-display" *ngIf="open">contact_phone</mat-icon>
+        <p mat-line *ngIf="open">College</p>
+    </a>
+</mat-nav-list> -->
+
+<mat-nav-list fxShow.sm fxShow.xs fxHide.gt-sm>
+    <div class="profilecard">
+        <div class="header">
+            <h2>Abhilekh</h2>
+        </div>
+        <img src="./assets/images/photo.jpg">
+    </div>
+    <mat-divider></mat-divider>
+    <div *ngFor="let menu of mainmenu; let i = index">
+        <a mat mat-list-item routerLinkActive="list-item-active" *ngIf="menu.route">
+            <!-- <mat-icon mat-list-icon>{{menu.icon}}</mat-icon> -->
+            <mat-icon mat-list-icon class="icon-display">{{menu.icon}}</mat-icon>
+            <p mat-line style="width: 100px;" routerLink="{{menu.route}}">{{menu.label}}</p>
+        </a>
+
+        <mat-divider></mat-divider>
+        <mat-expansion-panel mat mat-list-item routerLinkActive="list-item-active" *ngIf="!menu.route" [hideToggle]="!open" [disabled]="!open">
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    <!-- <mat-icon mat-list-icon *ngIf="!open">{{menu.icon}}</mat-icon> -->
+                    <mat-icon mat-list-icon class="icon-display">{{menu.icon}}</mat-icon>
+                    <p mat-line style="width: 100px; font-size: 16px; padding-left: 16px;padding-top: 12px;">{{menu.label}}</p>
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+                <a mat mat-list-item routerLinkActive="list-item-active" *ngFor="let item of menu.child">
+                    <mat-icon mat-list-icon class="icon-display">{{item.icon}}</mat-icon>
+                    <p style="padding-top: 11px; width: 132px;" routerLink="{{item.route}}">{{item.label}}</p>
+                </a>
+        </mat-expansion-panel>
+    </div>
+</mat-nav-list>
+<!-- <mat-nav-list fxShow.sm fxShow.xs fxHide.gt-sm>
+    <div class="profilecard">
+        <div class="header">
+            <h2>Abhilekh</h2>
+        </div>
+        <img src="./assets/images/photo.jpg" alt="">
+    </div>
+    <mat-divider></mat-divider>
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="/">
+        <mat-icon mat-list-icon>home</mat-icon>
+        <p mat-line>Home</p>
+    </a>
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="/post">
+        <mat-icon mat-list-icon>done</mat-icon>
+        <p mat-line>Post</p>
+    </a>
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="/group">
+        <mat-icon mat-list-icon>save</mat-icon>
+        <p mat-line>Group</p>
+    </a>
+    <mat-divider></mat-divider>
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="/">
+        <mat-icon mat-list-icon>import_contacts</mat-icon>
+        <p mat-line>Import</p>
+    </a>
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="/">
+        <mat-icon mat-list-icon>contact_phone</mat-icon>
+        <p mat-line>Leads</p>
+    </a>
+</mat-nav-list> -->

@@ -1,0 +1,107 @@
+{
+    "4":[
+        {
+            "label": "Dashboard",
+            "route": "/dashboard",
+            "icon": "dashboard",
+            "child": []
+        },
+        {
+            "label": "Main Menu 1",
+            "icon": "ballot",
+            "child": [
+                {
+                    "label" : "Sub Menu 1",
+                    "route" : "/Sub_Menu_1",
+                    "icon": "view_compact"
+                },
+                {
+                    "label" : "Sub Menu 2",
+                    "route" : "/Sub_Menu_2",
+                    "icon": "view_compact"
+                },
+                {
+                    "label" : "Sub Menu 3",
+                    "route" : "/Sub_Menu_3",
+                    "icon": "view_compact"
+                },
+                {
+                    "label" : "Sub Menu 4",
+                    "route" : "/Sub_Menu_4",
+                    "icon": "view_compact"
+                },
+                {
+                    "label" : "Sub Menu 5",
+                    "route" : "/Sub_Menu_5",
+                    "icon": "view_compact"
+                },
+                {
+                    "label" : "Sub Menu 6",
+                    "route" : "/Sub_Menu_6",
+                    "icon": "view_compact"
+                }
+            ]
+        },
+        {
+            "label": "Main Menu 2",
+            "icon": "ballot",
+            "child": [
+                {
+                    "label" : "Sub Menu 1",
+                    "route" : "/Sub_Menu_1",
+                    "icon": "view_compact"
+                },
+                {
+                    "label" : "Sub Menu 2",
+                    "route" : "/Sub_Menu_2",
+                    "icon": "view_compact"
+                },
+                {
+                    "label" : "Sub Menu 3",
+                    "route" : "/Sub_Menu_3",
+                    "icon": "view_compact"
+                },
+                {
+                    "label" : "Sub Menu 4",
+                    "route" : "/Sub_Menu_4",
+                    "icon": "view_compact"
+                },
+                {
+                    "label" : "Sub Menu 5",
+                    "route" : "/Sub_Menu_5",
+                    "icon": "view_compact"
+                },
+                {
+                    "label" : "Sub Menu 6",
+                    "route" : "/Sub_Menu_6",
+                    "icon": "view_compact"
+                },
+                {
+                    "label" : "Sub Menu 7",
+                    "route" : "/Sub_Menu_7",
+                    "icon": "view_compact"
+                },
+                {
+                    "label" : "Sub Menu 8",
+                    "route" : "/Sub_Menu_8",
+                    "icon": "view_compact"
+                },
+                {
+                    "label" : "Sub Menu 9",
+                    "route" : "/Sub_Menu_9",
+                    "icon": "view_compact"
+                },
+                {
+                    "label" : "Sub Menu 10",
+                    "route" : "/Sub_Menu_10",
+                    "icon": "view_compact"
+                },
+                {
+                    "label" : "Sub Menu 11",
+                    "route" : "/Sub_Menu_11",
+                    "icon": "view_compact"
+                }
+            ]
+        }
+    ]
+}

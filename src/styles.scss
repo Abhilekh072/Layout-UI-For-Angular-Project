@@ -1,0 +1,26 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.mat-list-base .mat-list-item .mat-list-item-content, .mat-list-base .mat-list-option .mat-list-item-content{
+    padding: 0px 0px 0px 5px !important;
+}
+
+.mat-expansion-panel-header{
+    height: 56px !important;
+}
+.mat-expansion-panel-body{
+    padding: 0 2px 10px 10px !important;
+}
+.mat-expansion-panel{
+    margin: 0 0 2px 0 !important;
+}
+
+.mat-expansion-panel-header[aria-disabled=true] {
+    color: rgb(0 0 0) !important;
+}
+
+.mat-expansion-panel-header-title, .mat-expansion-panel-header-description{
+    margin-right: 0px !important;
+}

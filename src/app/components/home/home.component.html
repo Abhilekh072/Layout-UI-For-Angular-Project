@@ -1,0 +1,50 @@
+<div class="container" fxFlex fxLayout="column">
+    <form [formGroup]="loginForm" (ngSubmit)="login(loginForm.value)" fxFlex fxLayout="column" fxFlexAlign="center"
+        fxLayoutAlign="center">
+        <div class=input>
+            <div class="row">
+                <div class="col-md-3">
+                    <mat-form-field appearance="outline">
+                        <mat-label>UserName</mat-label>
+                        <input matInput formControlName="userid">
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Password</mat-label>
+                        <input matInput formControlName="password" type="password">
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <button mat-raised-button color="primary" type="submit">Login</button>
+                </div>
+            </div>
+            <br><br>
+            <!-- <div class="row">
+                <div class="col-md-3">
+                    <button mat-raised-button color="warn" type="button" (click)="getPDF('AI notes 1.pdf')">Download</button>
+                </div>
+            </div>
+            <br><br>
+            <div class="row">
+                <div class="col-md-3">
+                    <button mat-raised-button color="warn" type="button" (click)="getPDF('Abhilekh.pdf')">Download</button>
+                </div>
+            </div>
+            <br><br>
+            <div class="row">
+                <div class="col-md-3">
+                    <button mat-raised-button color="warn" type="button" (click)="getPDF('O.pdf')">Download</button>
+                </div>
+            </div> -->
+
+        </div>
+    </form>
+</div>
+<!-- <div class="back">
+    <h1>Abhilekh</h1>
+</div> -->

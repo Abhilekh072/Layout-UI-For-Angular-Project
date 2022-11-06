@@ -1,0 +1,22 @@
+.mat-icon{
+    vertical-align: middle;
+    padding: 4px;
+}
+
+.profilecard{
+    text-align: center;
+    padding: 0 10px 10px 10px;
+    img {
+        height: 100px;
+        width: 100px;
+        object-fit: cover;
+        border-radius: 10%;
+    }
+}
+.icon-display {
+    transform: scale(1.3);
+}
+
+.mat-expansion-panel-header{
+    padding: 0 5px;
+}
